@@ -2,23 +2,26 @@
     0% {
         height: 100vh;
         opacity: 0;
+        background-color: transparent;
     }
     30% {
         opacity: 0.5;
     }
     100% {
-        height: 15vh;
+        height: 7rem;
         opacity: 1;
         position: fixed;
         top: 0;
         left: 0;
+        background-color: rgba(35,37,44,0.7);
     }
 }
 
 @keyframes header-slide-down {
     0% {
-        height: 15vh;
+        height: 7rem;
         opacity: 0.5;
+        background-color: rgba(35,37,44,0.9);
     }
     70% {
         opacity: 1;
@@ -26,6 +29,7 @@
     100% {
         height: 100vh;
         opacity: 1;
+        background-color: transparent;
     }
 }
 

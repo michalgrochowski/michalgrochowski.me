@@ -4,8 +4,10 @@
         $(".header__title").addClass("header__title--after-animation").removeClass("header__title--before-animation");
         $(".nav__link--back").addClass("nav__link--back--visible");
         if (e.target && e.target.matches(".nav__link--cv")) {
+            $(".section").removeClass("section--visible");
             $(".cv").addClass("section--visible");
         } else if (e.target && e.target.matches(".nav__link--contact")) {
+            $(".section").removeClass("section--visible");
             $(".contact").addClass("section--visible");
         }
     });
@@ -15,5 +17,12 @@
         $(".header__title").addClass("header__title--before-animation").removeClass("header__title--after-animation");
         $(".nav__link--back").removeClass("nav__link--back--visible");
         $(".section").removeClass("section--visible");
+    })
+
+    $("#buttonMail").on("click", function() {
+        $(this).text("mic.grochowski@gmail.com");
+    })
+    $("#buttonTel").on("click", function() {
+        $(this).text("509 581 510");
     })
 })();
