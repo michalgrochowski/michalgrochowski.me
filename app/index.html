@@ -5,9 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- CSS files -->
-	<link rel="stylesheet" href="css/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+	<!--build:css css/main.min.css -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- endbuild -->
 	<!-- Page info -->
 	<title>Michał Grochowski - interaktywne CV</title>
 	<meta name="description" content="Interaktywne CV Front-End Developera Michała Grochowskiego.">
@@ -28,21 +30,52 @@
 	<meta name="twitter:site" content="@dobrywebdev">
 	<meta name="twitter:creator" content="@dobrywebdev">
 </head>
-<body id="body" class="container"> 
-	<header class="header header--before-animation">
-		<h1 class="header__title header__title--before-animation">Michał Grochowski</h1>
-		<nav class="nav">
-			<ul class="nav__list">
-				<li class="nav__item"><button class="nav__link nav__link--back" href="..." title="">Wróć</button></li>
-				<li class="nav__item"><a class="nav__link nav__link--portfolio" href="https://dobrywebdev.pl" title="" target="_blank">Portfolio</a></li>
-				<li class="nav__item"><button class="nav__link nav__link--cv" href="" title="">CV</button></li>
-				<li class="nav__item"><button class="nav__link nav__link--contact" href="..." title="">Kontakt</button></li>
-			</ul>
-		</nav> 
-	</header>
-	<footer id="footer" class="footer">
-		<p class="footer__copyright">&copy; 2017 Michał Grochowski - </p><a href="https://dobrywebdev.pl" class="footer__link">dobrywebdev.pl</a>
-	</footer>
+<body class=""> 
+	<main class="container">
+		<header id="start" class="header header--before-animation">
+			<h1 class="header__title header__title--before-animation">Michał Grochowski</h1>
+			<nav class="nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#start" class="nav__link nav__link--back" title="">Wróć</a></li>
+					<li class="nav__item"><a href="https://dobrywebdev.pl" class="nav__link nav__link--portfolio" title="" target="_blank">Portfolio</a></li>
+					<li class="nav__item"><a href="#cv" class="nav__link nav__link--cv" title="">CV</a></li>
+					<li class="nav__item"><a href="#contact" class="nav__link nav__link--contact" title="">Kontakt</a></li>
+				</ul>
+			</nav> 
+		</header>
+		<section id="cv" class="section cv">
+			<h2 class="section__title">Curriculum Vitae</h2>
+			<div class="cv__boxes">
+				<article class="cv__box">
+					<h3 class="cv__subtitle">Dane osobowe</h3>
+					<p class="cv__description"><span class="cv__category">Imię i nazwisko:</span> Michał Grochowski</p>
+					<p class="cv__description"><span class="cv__category">Data urodzenia:</span> 16.05.1991</p>
+				</article>
+				<article class="cv__box">
+					<h3 class="cv__subtitle">Dane osobowe</h3>
+					<p class="cv__description"><span class="cv__category">Imię i nazwisko:</span> Michał Grochowski</p>
+					<p class="cv__description"><span class="cv__category">Data urodzenia:</span> 16.05.1991</p>
+				</article>
+				<article class="cv__box">
+					<h3 class="cv__subtitle">Dane osobowe</h3>
+					<p class="cv__description"><span class="cv__category">Imię i nazwisko:</span> Michał Grochowski</p>
+					<p class="cv__description"><span class="cv__category">Data urodzenia:</span> 16.05.1991</p>
+				</article>
+				<article class="cv__box">
+					<h3 class="cv__subtitle">Dane osobowe</h3>
+					<p class="cv__description"><span class="cv__category">Imię i nazwisko:</span> Michał Grochowski</p>
+					<p class="cv__description"><span class="cv__category">Data urodzenia:</span> 16.05.1991</p>
+				</article>
+			</div>
+		</section>
+		<section id="contact" class="section contact">
+			<h2 class="section__title">123</h2>
+		</section>
+		
+		<footer id="footer" class="footer">
+			<p class="footer__copyright">&copy; 2017 Michał Grochowski - </p><a href="https://dobrywebdev.pl" class="footer__link">dobrywebdev.pl</a>
+		</footer>
+	</main>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<!--build:js js/main.min.js -->
 	<script src="js/main.js"></script>

@@ -9,6 +9,9 @@
     100% {
         height: 15vh;
         opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -65,5 +68,19 @@
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes pop-up {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    } 30% {
+        opacity: 0;
+        transform: scale(.50);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }

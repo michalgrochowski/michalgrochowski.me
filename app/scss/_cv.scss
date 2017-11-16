@@ -1,0 +1,29 @@
+.cv {
+    
+}
+
+.cv__boxes {
+    @include flex-center-row;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.cv__box {  
+    width: 45%;
+    margin: 3rem 2.5%;
+    background-color: #eee;
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+.cv__subtitle {
+    text-align: center;
+}
+
+.cv__description {
+    
+}
+
+.cv__category {
+    font-weight: bold;
+}

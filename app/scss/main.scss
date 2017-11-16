@@ -1,20 +1,59 @@
 @import '_mixins.scss';
 
-
 // Main Styles
+* {
+    box-sizing: border-box;
+}
 
 html {
     font-size: 10px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
+    
 }
 body {
-    box-sizing: border-box;
     font-size: 1.6rem;
     color: #333;
 }
 
 // Header and nav
+
+.header {
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    &--before-animation {
+        height: 100vh;
+        @include flex-center-column;
+        animation: header-slide-down 1.5s;
+        position: static;
+    }
+    &--after-animation {
+        height: 15vh;
+        @include flex-center-row;
+        animation: header-slide-up 1.5s;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.header__title {
+    color: #d1d1d1;
+    width: 50%;
+    font-family: 'Pacifico', cursive;
+    &--before-animation {
+        font-size: 7rem;
+        text-align: center;
+        animation: header-title-animate-in 1.5s;
+    }
+    &--after-animation {
+        font-size: 3rem;
+        text-align: left;
+        margin-left: 2rem;
+        animation: header-title-animate-out 1.5s;
+    }
+}
 
 .nav {
     @include flex-center-row;
@@ -60,41 +99,40 @@ body {
     background: radial-gradient(#2f4b86,#23252c);
 }
 
-.header {
+.section {
+    display: none;
+    min-height: 100vh;
     width: 100vw;
-    &--before-animation {
-        height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    &--visible {
         @include flex-center-column;
-        animation: header-slide-down 1.5s;
-    }
-    &--after-animation {
-        height: 15vh;
-        @include flex-center-row;
-        animation: header-slide-up 1.5s;
+        animation: pop-up 3s;
     }
 }
 
-.header__title {
-    color: #d1d1d1;
-    width: 50%;
-    font-family: 'Pacifico', cursive;
-    &--before-animation {
-        font-size: 7rem;
-        text-align: center;
-        animation: header-title-animate-in 1.5s;
-    }
-    &--after-animation {
-        font-size: 3rem;
-        text-align: left;
-        margin-left: 2rem;
-        animation: header-title-animate-out 1.5s;
-    }
+.section__title {
+    font-size: 3rem;
+    color: #eeeeee;
 }
+
+// CV
+
+@import '_cv.scss';
+
+// Contact
+
+@import '_contact.scss';
+
+// Footer
 
 .footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 1;
     @include flex-row;
 }
 
